@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Example</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <a 
+  href="https://wa.me/5599999999999" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="fixed bottom-5 right-5 bg-green-500 z-50 text-blue-950 rounded-full p-5 shadow-lg hover:bg-green-600 transition transform hover:scale-105"
+  aria-label="Fale conosco no WhatsApp"
+>
+  <!-- Sua imagem aqui -->
+  <img src="assets/whatsapp-white.png" alt="WhatsApp" class="w-6 h-6 md:w-8 md:h-8">
+  </a>
+  <div class="mx-auto">
+    <nav class=" bg-gray-100 opacity-90 border-gray-200  fixed w-full z-50" style="top: 0;">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center justify-start space-x-3 rtl:space-x-reverse  ml-4">
+          <img src="assets/logobruno.png" class="h-9 md:absolute md:left-10" alt="Flowbite Logo " />
+        </a>
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+        <div id="navbar-default" class="hidden w-full md:block md:w-auto z-50">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 bg-gray-100 z-100  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
+            <li>
+                <a href="#" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">About</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Services</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Contact</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="m-2 flex justify-center items-center flex-col md:flex-row h-screen p-8 lg:p-20">
+      <div class="flex flex-col lg:w-1/2 gap-5 mt-40 md:mt-1">
+        <h1 class="text-blue-950 text-3xl lg:text-5xl font-bold leading-8 md:leading-10">
+          Ortopedista especializado no cuidado de ossos e articulações
+        </h1>
+        <p class="text-blue-950 opacity-70 w-5/6 lg:w-1/2 text-md lg:text-xl mt-1 lg:mt-3 leading-6 md:leading-10">Com uma abordagem humanizada e
+            tratamentos personalizados, ele está
+            pronto para ajudar você a voltar a viver
+            sem limitações.</p>
+            <a href="https://www.exemplo.com" class="cursor-pointer btn-container text-white mt-8 lg:mt-10 rounded-2xl text-md font-bold bg-blue-800 w-36 p-2 flex justify-center items-center hover:bg-blue-600 transition-colors duration-300 ease-in-out">
+              <button class="pulsating-btn cursor-pointer">Saiba Mais</button>
+            </a>
+            
+              
+     </div>
+     <div class="lg:ml-20 mr-32 lg:mr-1 flex justify-start">
+        <img src="assets/dr-bruno-1.png" class="w-full mt-8 lg:mt-10" alt="Flowbite Logo" />
+     </div>
+    </div>
+
+</div>
+
+
+<div class="relative min-h-screen px-4 mt-20 md:mt-4 flex items-center justify-center overflow-x-hidden">
+  <!-- Faixas horizontais cruzadas preenchendo toda a largura -->
+  <div class="absolute top-1/2 left-0 w-screen h-48 bg-blue-500 transform -translate-y-1/2 rotate-[-3deg]"></div>
+  <div class="absolute top-1/2 left-0 w-screen h-48 bg-blue-700 transform -translate-y-1/2 rotate-[3deg]"></div>
+
+  <div class="relative grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white">
+          <img src="assets/osso-cion.png" alt="Image 1" class="w-10 mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
+          <h3 class="text-3xl font-semibold text-gray-900 mt-10">Título 1</h3>
+          <p class="text-gray-600 mt-2 text-md">
+              Lore et do maecenas accumsan lacus vel facilisis. Nunc aliquet bibendum enim facilisis gravida neque convallis.
+          </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white">
+          <img src="assets/osso-cion.png" alt="Image 2" class="w-10 mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
+          <h3 class="text-3xl font-semibold text-gray-900 mt-10">Título 2</h3>
+          <p class="text-gray-600 mt-2 text-md">
+              Lore et do maecenas accumsan lacus vel facilisis. Nunc aliquet bibendum enim facilisis gravida neque convallis.
+          </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white">
+          <img src="assets/osso-cion.png" alt="Image 3" class="w-10 mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
+          <h3 class="text-3xl font-semibold text-gray-900 mt-10">Título 3</h3>
+          <p class="text-gray-600 mt-2 text-md">
+              Lore et do maecenas accumsan lacus vel facilisis. Nunc aliquet bibendum enim facilisis gravida neque convallis.
+          </p>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<div class=" min-h-screen  justify-center">
+  <div class="justify-center items-center flex flex-col">
+<h1 class="text-blue-500 text-3xl md:text-4xl font-bold mb-1 md:mb-4" id="agendamento">
+    Sobre
+  </h1>
+  <p class="text-gray-500 mb-14 text-center w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non temporibus possimus, error tenetur qui, dolore nesciunt quia repellendus tempore totam eum? Eaque saepe explicabo omnis quasi. Tempora, aspernatur? Sunt, quos.</p>
+  </div>
+  <div class=" mt-20 px-4 flex flex-col md:flex-row  justify-center gap-14">
+      <div class="flex flex-col justify-center text-center items-center">
+        <h1 class="text-6xl">1000+</h1>
+        <p>Descrição da estatistica vai vim bem aqui</p>
+      </div>
+      <div class="flex flex-col justify-center text-center items-center">
+        <h1 class="text-6xl">1000+</h1>
+        <p>Descrição da estatistica vai vim bem aqui</p>
+      </div>
+      <div class="flex flex-col justify-center text-center items-center">
+        <h1 class="text-6xl">1000+</h1>
+        <p>Descrição da estatistica vai vim bem aqui</p>
+      </div>
+    </div>
+</div>
+
+  
+</div>
+
+<div class=" min-h-screen flex bg-blue-600 w-full items-center flex-col md:flex-row  justify-center ">
+    <div class="w-1/2 p-5 flex justify-center items-center">
+       <div class="w-full h-96 bg-gray-100"></div>
+    </div>
+    <div class="1/2">
+      <div class="flex flex-col p-5 flex ">
+        <h1 class="text-4xl text-white ">Cuidado especializado para voce e sua familia</h1>
+        <p class="text-md mt-6 text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maiores nisi ducimus amet velit minus praesentium facilis dolores expedita nostrum incidunt tempore provident corporis inventore delectus facere, ipsum numquam minima! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam doloribus commodi blanditiis quos amet tempora, iusto sapiente totam, voluptatibus omnis quidem inventore possimus! Doloribus accusantium quam fugiat voluptatum itaque! Alias?</p>
+        <div class="flex mt-10">
+          <div class="flex flex-col md:flex-row gap-5">
+            <div class="bg-gray-100 w-14 h-14 rounded-full"></div>
+            <div class="flex flex-col">
+              <h1 class="text-xl text-white ">teste</h1>
+              <p class="text-sm md:text-md w-full md:w-3/4">Lorem ipsum dolor sit amet consectetur, adipit. Modi, voluptates porro accusantium</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5">
+            <div class="bg-gray-100 w-14 h-14 rounded-full"></div>
+            <div class="flex flex-col"> 
+              <h1 class="text-xl text-white ">teste</h1>
+              <p class="text-sm md:text-md w-full md:w-3/4">Lorem ipsum dolor sit amet consectetur, adipit. Modi, voluptates porro accusantium</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="min-h-screen px-4 mt-20 flex justify-center">
+  <div class="flex flex-col items-center w-full">
+    <!-- Título e descrição no topo -->
+    <div class="text-center mb-14">
+      <h1 class="text-blue-500 text-3xl md:text-4xl font-bold mb-4" id="agendamento">
+        Especialistas
+      </h1>
+      <p class="text-gray-500">Especialistas disponíveis na clínica</p>
+    </div>
+
+    <!-- 3 tópicos lado a lado -->
+    <div class="flex flex-col md:flex-row gap-14 justify-center w-full mt-20">
+      <div class="flex flex-col justify-center items-center text-center">
+        <div class="w-20 h-20 bg-blue-500 rounded-full"></div>
+        <div class="text-md text-blue-500 mt-4">Lorem ipsum dolor nm recusandae laudantium pariatur, quisquam excepturi aliquam. Explicabo.</div>
+      </div>
+      <div class="flex flex-col justify-center items-center text-center">
+        <div class="w-20 h-20 bg-blue-500 rounded-full"></div>
+        <div class="text-md text-blue-500 mt-4">Lorem ipsum dolor nm recusandae laudantium pariatur, quisquam excepturi aliquam. Explicabo.</div>
+      </div>
+      <div class="flex flex-col justify-center items-center text-center">
+        <div class="w-20 h-20 bg-blue-500 rounded-full"></div>
+        <div class="text-md text-blue-500 mt-4">Lorem ipsum dolor nm recusandae laudantium pariatur, quisquam excepturi aliquam. Explicabo.</div>
+      </div>
+    </div>
+
+    <div class="w-full mt-10">
+      <div class="relative w-full max-w-7xl mx-auto mt-10">
+        <!-- Carrossel -->
+        <div class="flex overflow-x-hidden">
+          <!-- Lista de Cards -->
+          <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-blue-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 1</h3>
+              <p>Conteúdo do card 1.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-green-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 2</h3>
+              <p>Conteúdo do card 2.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-red-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 3</h3>
+              <p>Conteúdo do card 3.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-yellow-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 4</h3>
+              <p>Conteúdo do card 4.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-purple-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 5</h3>
+              <p>Conteúdo do card 5.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-pink-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 6</h3>
+              <p>Conteúdo do card 6.</p>
+            </div>
+            <!-- Card 7 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-indigo-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 7</h3>
+              <p>Conteúdo do card 7.</p>
+            </div>
+            <!-- Card 8 -->
+            <div class="flex-shrink-0 w-80 h-80 bg-teal-500 text-white rounded-lg shadow-lg m-4 p-4">
+              <h3 class="text-xl font-bold">Card 8</h3>
+              <p>Conteúdo do card 8.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Botões de navegação -->
+        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white py-4 px-5 rounded-full" id="prevBtn">
+          <span class="material-icons"><</span>
+        </button>
+        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white  py-4 px-5  rounded-full" id="nextBtn">
+          <span class="material-icons">></span>
+        </button>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<div id="contato" class="min-h-screen pattern bg-blue-500 mt-20   w-full flex justify-center items-center flex-col -mt-5 md:mt-10">
+  <div class="justify-center items-center flex flex-col">
+    <h1 class="text-white text-3xl md:text-4xl font-bold mb-1 md:mb-4 " id="agendamento">
+        Especialistas
+      </h1>
+      <p class="text-gray-100 mb-14 text-center">Especialistas disponiveis na clínica</p>
+      </div>
+  <div class="md:w-1/2 w-2/3">
+    
+    <label for="input-group-1" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+    <div class="relative md:mb-8 mb-6">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+        <img src="assets/user-form.png" class="w-6" alt="">
+      </div>
+      <input type="text" id="input-group-1" class="p-4 bg-blue-500 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nome">
+    </div>
+  
+    <label for="input-group-2" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+    <div class="relative md:mb-8 mb-6">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+        <img src="assets/email-form.png" class="w-6" alt="">
+      </div>
+      <input type="email" id="input-group-2" class="p-4 bg-blue-500 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="SeuEmail@gmail.com">
+    </div>
+
+    <label for="input-group-3" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+    <div class="relative md:mb-8 mb-6">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+        <img src="assets/phone-form.png" class="w-6" alt="">
+      </div>
+      <input type="tel" id="input-group-3" class="p-4 bg-blue-500 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="(00) 00000-0000" pattern="^\(\d{3}\) \d{3}-\d{4}$">
+    </div>
+
+    <!-- Botão de Enviar -->
+    <div class="relative mb-8">
+      <button type="submit" class="w-full bg-white p-4 text-black font-bold rounded-2xl hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 focus:outline-none dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-400">
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    
+
+<footer class="bg-blue-500  shadow dark:bg-blue-500 mt-20">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm  sm:text-center text-black">© 2023 <a href="" class="hover:underline">DrBruno™</a>. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-black sm:mt-0">
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Privacy </a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline">Contact</a>
+      </li>
+  </ul>
+  </div>
+</footer>
+
+  
+
+</div>
+    
+
+  </div>
+  <script src="./js/script"></script>
+  <!-- JavaScript para abrir/fechar o menu -->
+</body>
+</html>
