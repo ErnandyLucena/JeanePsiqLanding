@@ -20,7 +20,7 @@
   
   .btn-container:hover {
     cursor: pointer;
-    background-color: #053574; /* yellow-600 */
+    background-color: #230574; /* yellow-600 */
   }
   
   .btn-container .pulsating-btn {
