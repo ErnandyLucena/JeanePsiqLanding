@@ -1,4 +1,4 @@
-/* Animação de pulsação */
+
 
 .geral-container {
   scroll-behavior: smooth;
@@ -21,7 +21,7 @@
   .btn-container {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    animation: pulse 1.5s infinite; /* Animação aplicada ao botão */
+    animation: pulse 1.5s infinite; 
   }
   
   .btn-container:hover {
