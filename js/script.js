@@ -1,32 +1,15 @@
-        const carousel = document.getElementById('carousel');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-      
-        let index = 0;
-        const totalCards = 8; 
-        const cardWidth = 288; 
-      
-       
-        nextBtn.addEventListener('click', () => {
-          if (index < totalCards - 1) {
-            index++;
-            carousel.style.transform = `translateX(-${cardWidth * index + 16 * index}px)`; 
-          }
-        });
-      
-     
-        prevBtn.addEventListener('click', () => {
-          if (index > 0) {
-            index--;
-            carousel.style.transform = `translateX(-${cardWidth * index + 16 * index}px)`; 
-          }
-        });
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar-default');
+const navLinks = document.querySelectorAll('.nav-link');
 
-        const menuToggle = document.getElementById('menu-toggle');
-  const navbar = document.getElementById('navbar-default');
+// Abre e fecha o menu ao clicar no botão
+menuToggle.addEventListener('click', () => {
+  navbar.classList.toggle('hidden');
+});
 
-
-  menuToggle.addEventListener('click', () => {
-  
-    navbar.classList.toggle('hidden');
+// Fecha o menu ao clicar em qualquer item de navegação
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.add('hidden');
   });
+});

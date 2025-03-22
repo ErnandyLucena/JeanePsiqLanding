@@ -6,6 +6,7 @@
   <title>Tailwind Example</title>
   <link rel="stylesheet" href="./css/styles.css">
   <!-- Tailwind CSS via CDN -->
+  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -25,7 +26,7 @@
         <a href="https://flowbite.com/" class="flex items-center justify-start space-x-3 rtl:space-x-reverse  ml-4">
           <img src="assets/logo-jenae.png" class="h-9 md:absolute md:left-10" alt="Flowbite Logo " />
         </a>
-        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  indigo:focu:indigotext-indigo-900 hover:bg-indigo-200">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -34,19 +35,19 @@
         <div id="navbar-default" class="hidden w-full md:block md:w-auto z-50">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 bg-gray-100 z-100  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
             <li>
-                <a href="#Home" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950" aria-current="page">Home</a>
+                <a href="#Home" class="block py-2 px-3 nav-link  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#Sobre" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Sobre</a>
+                <a href="#Sobre" class="block py-2 px-3  nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Sobre</a>
               </li>
               <li>
-                <a href="#Servicos" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Serviços</a>
+                <a href="#Servicos" class="block py-2 px-3 nav-link  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Serviços</a>
               </li>
               <li>
-                <a href="#Online" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Online</a>
+                <a href="#Online" class="block py-2 px-3 nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Online</a>
               </li>
               <li>
-                <a href="#Contato" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-blue-950  dark:hover:bg-gray-700 dark:hover:text-blue-950">Contato</a>
+                <a href="#Contato" class="block py-2 px-3  nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Contato</a>
               </li>
           </ul>
         </div>
@@ -80,13 +81,13 @@
 
 <div class="relative min-h-screen px-4 flex items-center justify-center overflow-x-hidden  ">
   <div class="mt-60 md:mt-0">
-  <div class="absolute top-1/2 left-0 w-screen h-48 bg-indigo-500 transform -translate-y-1/2 rotate-[-3deg] "></div>
-  <div class="absolute top-1/2 left-0 w-screen h-48 bg-indigo-700 transform -translate-y-1/2 rotate-[3deg]"></div>
+  <div class="absolute md:top-1/2 top-1/2 left-0 w-screen h-48 bg-indigo-500 transform -translate-y-1/2  "></div>
+  <div class="absolute md:top-2/3 top-1/2 left-0 w-screen h-40 md:h-48 bg-indigo-700 transform -translate-y-1/2 "></div>
 
 
-  <div class="relative grid grid-cols-1 md:grid-cols-3 gap-10 mt-[-80px] mt-20">
+  <div class="card-container relative grid grid-cols-1 md:grid-cols-3 gap-10 mt-[-80px] mt-20">
       <!-- Card 1 -->
-      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
+      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
         <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
           <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
             <img src="assets/sad.png" alt="" class="w-12">
@@ -101,7 +102,7 @@
     </div>
 
       <!-- Card 2 -->
-      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
+      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
           <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
             <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
               <img src="assets/sad.png" alt="" class="w-12">
@@ -116,7 +117,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
+      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
         <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
           <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
             <img src="assets/sad.png" alt="" class="w-12">
@@ -251,80 +252,9 @@
   </div>
 </div>
 
-<div class="min-h-screen px-4 flex justify-center items-center">
-  <div class="flex flex-col items-center w-full -mt-36 md:mt-0">
-    <!-- Título e descrição no topo -->
-    <div class="text-center ">
-      <h1 class="text-indigo-500 text-4xl md:text-4xl font-bold mb-4" id="agendamento">
-        Conheça mais
-      </h1>
-      <p class="text-gray-500 px-4">Conheça um pouco mais sobre o nosso espaço</p>
-    </div>
 
 
-
-    <div class="w-full ">
-      <div class="relative w-full max-w-7xl mx-auto mt-14">
-        <!-- Carrossel -->
-        <div class="flex overflow-x-hidden">
-          <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-            <!-- Card 1 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-950 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 1</h3>
-              <p>Conteúdo do card 1.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-900 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 2</h3>
-              <p>Conteúdo do card 2.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-800 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 3</h3>
-              <p>Conteúdo do card 3.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-700 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 4</h3>
-              <p>Conteúdo do card 4.</p>
-            </div>
-            <!-- Card 5 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-600 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 5</h3>
-              <p>Conteúdo do card 5.</p>
-            </div>
-            <!-- Card 6 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-500 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 6</h3>
-              <p>Conteúdo do card 6.</p>
-            </div>
-            <!-- Card 7 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-400 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 7</h3>
-              <p>Conteúdo do card 7.</p>
-            </div>
-            <!-- Card 8 -->
-            <div class="flex-shrink-0 w-80 h-80 bg-indigo-300 text-white rounded-lg shadow-lg m-4 p-4">
-              <h3 class="text-xl font-bold">Card 8</h3>
-              <p>Conteúdo do card 8.</p>
-            </div>
-          </div>
-        </div>
-      
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white py-4 px-5 rounded-full" id="prevBtn">
-          <span class="material-icons"><</span>
-        </button>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white  py-4 px-5  rounded-full" id="nextBtn">
-          <span class="material-icons">></span>
-        </button>
-      </div>
-      
-    </div>
-
-  </div>
-</div>
-
-<div id="Contato" class="min-h-screen pattern bg-indigo-600 -mt-32  gap-8 md:gap-32  w-full flex flex-col md:flex-row justify-center items-center md:mt-10">
+<div id="Contato" class="min-h-screen pattern bg-indigo-600 mt-5  gap-8 md:gap-32  w-full flex flex-col md:flex-row justify-center items-center md:mt-10">
   <img src="assets/forms-image.png" class="w-36 md:w-1/5 " alt="">
       
   <div class="md:w-1/3 w-2/3">
@@ -336,35 +266,67 @@
         </div>
 
     
-    <label for="input-group-1" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-    <div class="relative md:mb-8 mb-6">
-      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-        <img src="assets/user-white.png" class="w-6" alt="">
-      </div>
-      <input type="text" id="input-group-1" class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nome">
-    </div>
-  
-    <label for="input-group-2" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-    <div class="relative md:mb-8 mb-6">
-      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-        <img src="assets/email-white.png" class="w-6" alt="">
-      </div>
-      <input type="email" id="input-group-2" class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="SeuEmail@gmail.com">
-    </div>
-
-    <label for="input-group-3" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-    <div class="relative md:mb-8 mb-6">
-      <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-        <img src="assets/phone-white.png" class="w-6" alt="">
-      </div>
-      <input type="tel" id="input-group-3" class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="(00) 00000-0000" pattern="^\(\d{3}\) \d{3}-\d{4}$">
-    </div>
-
-    <div class="relative mb-8">
-      <button type="submit" class="w-full bg-white p-4 text-black font-bold rounded-2xl hover:bg-indigo-700 hover:text-white focus:ring-4 focus:ring-yellow-300 focus:outline-none">
-        Enviar
-      </button>
-    </div>
+        <form action="https://api.staticforms.xyz/submit" method="POST">
+          <!-- Chave de acesso -->
+          <input type="hidden" name="accessKey" value="c02ec56a-d7cb-420d-9a48-4d88d85160ff">
+        
+          <!-- Campo para redirecionamento opcional após envio -->
+          <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/JeanePsiqLanding/send.html">
+        
+          <!-- Nome -->
+          <label for="input-group-1" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+          <div class="relative md:mb-8 mb-6">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+              <img src="assets/user-white.png" class="w-6" alt="">
+            </div>
+            <input type="text" name="name" required id="input-group-1" 
+                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
+                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
+                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
+                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                   placeholder="Nome">
+          </div>
+        
+          <!-- Email -->
+          <label for="input-group-2" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+          <div class="relative md:mb-8 mb-6">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+              <img src="assets/email-white.png" class="w-6" alt="">
+            </div>
+            <input type="email" name="email" required id="input-group-2" 
+                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
+                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
+                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
+                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                   placeholder="SeuEmail@gmail.com">
+          </div>
+        
+          <!-- Telefone -->
+          <label for="input-group-3" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
+          <div class="relative md:mb-8 mb-6">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
+              <img src="assets/phone-white.png" class="w-6" alt="">
+            </div>
+            <input type="text" name="phone" required id="input-group-3" 
+                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
+                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
+                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
+                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                   placeholder="(00) 00000-0000">
+          </div>
+        
+          <!-- Botão -->
+          <div class="relative mb-8">
+            <button type="submit" 
+                    class="w-full bg-white p-4 text-black font-bold rounded-2xl 
+                           hover:bg-indigo-700 hover:text-white focus:ring-4 
+                           focus:ring-yellow-300 focus:outline-none">
+              Enviar
+            </button>
+          </div>
+        </form>
+        
+        
   </div>
 </div>
 
