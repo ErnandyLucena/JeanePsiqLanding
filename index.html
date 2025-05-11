@@ -1,362 +1,661 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Example</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- Tailwind CSS via CDN -->
-  
+  <title>Jeane Psicóloga - Equilíbrio Emocional</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-  <a 
-  href="https://wa.me/5599999999999" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="fixed bottom-5 right-5 bg-green-500 z-50 text-blue-950 rounded-full p-5 shadow-lg hover:bg-green-600 transition transform hover:scale-105"
-  aria-label="Fale conosco no WhatsApp"
->
-  <img src="assets/whatsapp-white.png" alt="WhatsApp" class="w-6 h-6 md:w-8 md:h-8">
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-8 right-8 bg-green-500 z-50 text-white rounded-full p-4 px-5 shadow-lg hover:bg-green-600 transition-all"
+    aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
   </a>
-  
-  <div class="mx-auto">
-    <nav class=" bg-gray-100 opacity-90 border-gray-200  fixed w-full z-50" style="top: 0;">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center justify-start space-x-3 rtl:space-x-reverse  ml-4">
-          <img src="assets/logo-jenae.png" class="h-9 md:absolute md:left-10" alt="Flowbite Logo " />
-        </a>
-        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400  indigo:focu:indigotext-indigo-900 hover:bg-indigo-200">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-        </button>
-        <div id="navbar-default" class="hidden w-full md:block md:w-auto z-50">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 bg-gray-100 z-100  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
-            <li>
-                <a href="#Home" class="block py-2 px-3 nav-link  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="#Sobre" class="block py-2 px-3  nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Sobre</a>
-              </li>
-              <li>
-                <a href="#Servicos" class="block py-2 px-3 nav-link  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Serviços</a>
-              </li>
-              <li>
-                <a href="#Online" class="block py-2 px-3 nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Online</a>
-              </li>
-              <li>
-                <a href="#Contato" class="block py-2 px-3  nav-link rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 md:p-0 text-indigo-950  hover:text-indigo-900 hover:bg-indigo-200">Contato</a>
-              </li>
+
+  <!-- Navigation -->
+  <nav class="bg-indigo-50/80 backdrop-blur-sm border-b border-indigo-100 fixed w-full z-40 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <img src="assets/logo-jenae.png" class="h-10" alt="Jeane Psicóloga Logo">
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#Home" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Home</a>
+            <a href="#Sobre" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Sobre</a>
+            <a href="#Servicos" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Serviços</a>
+            <a href="#Abordagem" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Abordagem</a>
+            <a href="#Online" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Online</a>
+            <a href="#FAQ" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">FAQ</a>
+            <a href="#Contato" class="nav-link text-indigo-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Contato</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100 focus:outline-none">
+            <span class="sr-only">Abrir menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-indigo-50/95 backdrop-blur-sm">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#Home" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Home</a>
+        <a href="#Sobre" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Sobre</a>
+        <a href="#Servicos" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Serviços</a>
+        <a href="#Abordagem" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Abordagem</a>
+        <a href="#Online" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Online</a>
+        <a href="#FAQ" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">FAQ</a>
+        <a href="#Contato" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-900 hover:text-indigo-600 hover:bg-indigo-100">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="Home" class="pt-32 md:h-screen flex items-center pb-20 md:pt-40 md:pb-32 px-6 sm:px-12 lg:px-24 bg-gradient-to-b from-indigo-50 to-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+          <h1 class="text-indigo-600 text-2xl md:text-3xl font-medium mb-2">Jeane Psicóloga</h1>
+          <h2 class="text-gray-900 text-3xl md:text-5xl font-bold leading-tight mb-6">
+            Equilíbrio emocional para uma vida mais leve
+          </h2>
+          <p class="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed">
+            Você merece um espaço de acolhimento e escuta qualificada para compreender suas emoções e superar desafios. 
+            Com uma abordagem baseada na ciência, ofereço suporte psicológico para ajudar você a fortalecer sua autoconfiança, 
+            lidar melhor com suas emoções e construir relações mais saudáveis.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#Contato" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg transition-all shadow text-center">
+              Agende sua consulta
+            </a>
+            <a href="#Servicos" class="inline-block border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-medium py-3 px-8 rounded-lg transition-all text-center">
+              Conheça os serviços
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="assets/jeane-header.png" alt="Jeane Psicóloga" class="rounded-lg max-w-md w-80 md:w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Cards -->
+  <section class="py-20 px-6 md:h-screen flex items-center sm:px-12 lg:px-24 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Como Posso Ajudar</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          Ofereço suporte psicológico especializado para diversas necessidades emocionais e comportamentais.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-indigo-50 rounded-lg overflow-hidden border border-indigo-100">
+          <div class="flex justify-center mt-8">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-indigo-100">
+              <i class="fas fa-heart text-indigo-600 text-2xl"></i>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Emoções</h3>
+            <p class="text-indigo-600 font-medium mb-4">Equilíbrio emocional para uma vida mais leve</p>
+            <p class="text-gray-600">
+              Gestão das emoções, autoestima, autoconfiança e autoaceitação para lidar melhor com os desafios do dia a dia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-indigo-50 rounded-lg overflow-hidden border border-indigo-100">
+          <div class="flex justify-center mt-8">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-indigo-100">
+              <i class="fas fa-users text-indigo-600 text-2xl"></i>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Relacionamentos</h3>
+            <p class="text-indigo-600 font-medium mb-4">Conexões mais saudáveis e harmoniosas</p>
+            <p class="text-gray-600">
+              Apoio para fortalecer relações afetivas, familiares e profissionais, além de desenvolver comunicação assertiva e resolução de conflitos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-indigo-50 rounded-lg overflow-hidden border border-indigo-100">
+          <div class="flex justify-center mt-8">
+            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-indigo-100">
+              <i class="fas fa-globe-americas text-indigo-600 text-2xl"></i>
+            </div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Adaptação</h3>
+            <p class="text-indigo-600 font-medium mb-4">Suporte para mudanças e desafios da vida</p>
+            <p class="text-gray-600">
+              Acompanhamento para adaptação em novos países, acolhimento no puerpério e tratamento para transtornos como ansiedade, depressão e fobias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="Sobre" class="py-20 md:h-screen flex items-center px-6 sm:px-12 lg:px-24 bg-indigo-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+          <img src="assets/jeane-foto.png" alt="Sobre Jeane Psicóloga" class="rounded-lg w-64 md:w-full max-w-md mx-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sobre Mim</h2>
+          <div class="w-20 h-1 bg-indigo-600 mb-6"></div>
+          <p class="text-gray-600 text-lg mb-6">
+            Psicóloga com 20 anos de experiência clínica, especializada em Terapia Cognitivo-Comportamental (TCC). 
+            Minha jornada profissional é marcada pelo compromisso com o cuidado ético e humanizado.
+          </p>
+          <p class="text-gray-600 text-lg mb-6">
+            Sou pós-graduanda em Psicopatologia e Psicoterapias Baseadas em Evidências, o que me permite oferecer 
+            um atendimento alinhado com as melhores práticas da psicologia contemporânea.
+          </p>
+          <p class="text-gray-600 text-lg mb-8">
+            Acredito que cada pessoa é única e merece uma abordagem personalizada. Meu objetivo é criar um espaço 
+            seguro onde você possa explorar suas emoções, desenvolver autoconhecimento e encontrar caminhos para 
+            uma vida mais equilibrada e significativa.
+          </p>
+          <div class="flex items-center space-x-4">
+            <div class="bg-white p-3 rounded-full shadow-sm">
+              <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+            </div>
+            <div class="bg-white p-3 rounded-full shadow-sm">
+              <i class="fas fa-certificate text-indigo-600 text-xl"></i>
+            </div>
+            <div class="bg-white p-3 rounded-full shadow-sm">
+              <i class="fas fa-heart text-indigo-600 text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section id="Abordagem" class="py-20 md:h-screen flex items-center px-6 sm:px-12 lg:px-24 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Minha Abordagem</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          Utilizo a Terapia Cognitivo-Comportamental (TCC), uma abordagem científica e eficaz para diversos desafios emocionais.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-indigo-50 rounded-lg p-8 border border-indigo-100">
+          <div class="flex items-start mb-6">
+            <div class="bg-white p-3 rounded-full mr-4 shadow-sm">
+              <i class="fas fa-brain text-indigo-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Terapia Cognitivo-Comportamental</h3>
+              <p class="text-gray-600">
+                A TCC é focada no presente e orientada para soluções, ajudando a identificar e modificar padrões de pensamento e comportamento que causam sofrimento.
+              </p>
+            </div>
+          </div>
+          <ul class="space-y-3 pl-4">
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Foco na resolução de problemas atuais</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Baseada em evidências científicas</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Técnicas práticas para o dia a dia</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-8 border border-indigo-100">
+          <div class="flex items-start mb-6">
+            <div class="bg-white p-3 rounded-full mr-4 shadow-sm">
+              <i class="fas fa-hands-helping text-indigo-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Processo Terapêutico</h3>
+              <p class="text-gray-600">
+                O trabalho terapêutico é colaborativo, onde juntos identificamos objetivos e estratégias personalizadas para seu crescimento.
+              </p>
+            </div>
+          </div>
+          <ul class="space-y-3 pl-4">
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Acolhimento sem julgamentos</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Foco no seu potencial de mudança</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-indigo-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Ferramentas para autonomia emocional</span>
+            </li>
           </ul>
         </div>
       </div>
-    </nav>
-    <div class="m-2 flex justify-center items-center flex-col md:flex-row min-h-screen p-8 lg:p-20">
-      <div class="flex flex-col lg:w-1/2 gap-5 mt-24 md:mt-28 md:mt-1">
-        <h1 class="text-gray-500 text-2xl lg:text-3xl font-semibold leading-8 md:leading-10">
-          Jeane Psicóloga
-        </h1>
-        <h1 class="text-indigo-800 text-3xl lg:text-5xl font-bold mt-2 md:mt-5 leading-8 md:leading-10">
-          Equilíbrio emocional para uma vida mais leve
-
-        </h1>
-        <p class="text-blue-950 opacity-70 w-5/6 lg:w-2/3 text-md lg:text-xl mt-1 lg:mt-3 leading-6 md:leading-10">Você merece um espaço de acolhimento e escuta qualificada para compreender suas emoções e superar desafios. Com uma abordagem baseada na ciência. Te oferece suporte psicológico para ajudar você a fortalecer sua autoconfiança, lidar melhor com suas emoções e construir relações mais saudáveis.
-
-        </p>
-            <a href="https://www.exemplo.com" class="cursor-pointer btn-container text-white mt-8 lg:mt-10 rounded-2xl text-lg font-bold bg-indigo-800 w-36 p-4 flex justify-center items-center hover:bg-blue-600 transition-colors duration-300 ease-in-out">
-              <button class="pulsating-btn cursor-pointer">Saiba Mais</button>
-            </a>
-            
-              
-     </div>
-     <div class="lg:ml-20 mr-32 lg:mr-1 flex justify-start">
-        <img src="assets/jeane-header.png" class="w-full mt-20 lg:mt-10" alt="Flowbite Logo" />
-     </div>
     </div>
+  </section>
 
-</div>
-
-
-<div class="relative min-h-screen px-4 flex items-center justify-center overflow-x-hidden  ">
-  <div class="mt-60 md:mt-0">
-  <div class="absolute md:top-1/2 top-1/2 left-0 w-screen h-48 bg-indigo-500 transform -translate-y-1/2  "></div>
-  <div class="absolute md:top-2/3 top-1/2 left-0 w-screen h-40 md:h-48 bg-indigo-700 transform -translate-y-1/2 "></div>
-
-
-  <div class="card-container relative grid grid-cols-1 md:grid-cols-3 gap-10 mt-[-80px] mt-20">
-      <!-- Card 1 -->
-      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
-        <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
-          <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
-            <img src="assets/sad.png" alt="" class="w-12">
-          </div>
-          
+  <!-- Services Section -->
+  <section id="Servicos" class="py-20 md:h-screen flex items-center px-6 sm:px-12 lg:px-24 bg-indigo-600 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+          <img src="assets/image-saude.png" alt="Saúde Mental" class="rounded-lg w-64 md:w-full max-w-md mx-auto">
         </div>
-        <h3 class="text-3xl font-bold text-indigo-900 mt-10">Emoções</h3>
-        <P class="text-indigo-900 mt-5 text-md font-semibold">Equilíbrio emocional para uma vida mais leve</P>
-        <p class="text-gray-600 text-md">
-          Gestão das emoções, autoestima, autoconfiança e autoaceitação para lidar melhor com os desafios do dia a dia.
-        </p>
-    </div>
-
-      <!-- Card 2 -->
-      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
-          <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
-            <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
-              <img src="assets/sad.png" alt="" class="w-12">
+        <div class="md:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Áreas de Atuação</h2>
+          <div class="w-20 h-1 bg-white mb-6"></div>
+          <p class="text-indigo-100 text-lg mb-8">
+            Ofereço acompanhamento psicológico especializado para diversas necessidades emocionais e comportamentais, 
+            sempre com base em evidências científicas e com um olhar humanizado.
+          </p>
+          
+          <div class="space-y-8">
+            <div class="flex items-start">
+              <div class="bg-white/20 p-3 rounded-full mr-4">
+                <i class="fas fa-check-circle text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Ansiedade e Estresse</h3>
+                <p class="text-indigo-100">
+                  Técnicas para gerenciar preocupações excessivas, ataques de pânico e fobias específicas.
+                </p>
+              </div>
             </div>
             
-          </div>
-          <h3 class="text-3xl font-bold text-indigo-900 mt-10">Relacionamentos</h3>
-          <P class="text-indigo-900 mt-5 text-md font-semibold">Conexões mais saudáveis e harmoniosas</P>
-          <p class="text-gray-600 text-md">
-            Apoio para fortalecer relações afetivas, familiares e profissionais, além de desenvolver comunicação assertiva e resolução de conflitos.
-          </p>
-      </div>
+            <div class="flex items-start">
+              <div class="bg-white/20 p-3 rounded-full mr-4">
+                <i class="fas fa-check-circle text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Depressão</h3>
+                <p class="text-indigo-100">
+                  Acompanhamento para lidar com tristeza persistente, desânimo e perda de interesse em atividades.
+                </p>
+              </div>
+            </div>
 
-      <!-- Card 3 -->
-      <div class="card relative border-2 border-blue-500 justify-center rounded-xl p-6 text-center flex flex-col py-20 max-h-[400px] max-w-[400px] bg-white shadow-lg">
-        <div class=" mx-auto mb-5 absolute top-[-30px] left-1/2 transform -translate-x-1/2">
-          <div class="bg-indigo-500 w-24 h-24 rounded-full items-center flex justify-center">
-            <img src="assets/sad.png" alt="" class="w-12">
+            <div class="flex items-start">
+              <div class="bg-white/20 p-3 rounded-full mr-4">
+                <i class="fas fa-check-circle text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Desenvolvimento Pessoal</h3>
+                <p class="text-indigo-100">
+                  Autoconhecimento, autoestima e habilidades para enfrentar desafios pessoais e profissionais.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Section -->
+  <section id="Online" class="py-20 md:h-screen flex items-center px-6 sm:px-12 lg:px-24 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Atendimento Online</h2>
+          <div class="w-20 h-1 bg-indigo-600 mb-6"></div>
+          <p class="text-gray-600 text-lg mb-8">
+            A terapia online oferece toda a qualidade do atendimento presencial com a comodidade de ser realizada 
+            no conforto da sua casa ou em qualquer lugar com privacidade.
+          </p>
           
+          <div class="space-y-8">
+            <div class="flex items-start">
+              <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                <i class="fas fa-lock text-indigo-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Privacidade Garantida</h3>
+                <p class="text-gray-600">
+                  Utilizamos plataformas seguras e criptografadas para garantir a confidencialidade das sessões.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                <i class="fas fa-clock text-indigo-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Flexibilidade de Horários</h3>
+                <p class="text-gray-600">
+                  Agende suas consultas em horários mais convenientes para sua rotina.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                <i class="fas fa-globe text-indigo-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Acesso de Qualquer Lugar</h3>
+                <p class="text-gray-600">
+                  Ideal para quem viaja frequentemente ou mora no exterior.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="text-3xl font-bold text-indigo-900 mt-10">Adaptação</h3>
-        <P class="text-indigo-900 mt-5 text-md font-semibold">Suporte para mudanças e desafios da vida</P>
-        <p class="text-gray-600 text-md">
-          Acompanhamento para adaptação em novos países, acolhimento no puerpério e tratamento para transtornos como ansiedade, depressão e fobias.
+        <div class="md:w-1/2 md:pl-12">
+          <img src="assets/online-psi.png" alt="Atendimento Online" class="rounded-lg w-64 md:w-full max-w-md mx-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="FAQ" class="py-20 md:h-screen flex items-center px-6 sm:px-12 lg:px-24 bg-indigo-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Perguntas Frequentes</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          Tire suas dúvidas sobre o processo terapêutico e como funciona o acompanhamento psicológico.
         </p>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-<div class="  justify-center" id="Sobre">
-  <div class="justify-center items-center flex flex-col">
-<h1 class="text-indigo-500 text-3xl md:text-5xl font-bold mb-1 md:mb-10 mt-32 md:mt-0" id="agendamento">
-    Sobre
-  </h1>
-  <p class="text-gray-500 text-lg mb-14 text-center w-2/3 mt-5">Psicóloga com 20 anos de experiência, especializada em Terapia Comportamental Cognitiva, abordagem que ajuda a compreender e modificar padrões de pensamento e comportamento. Pós-graduanda em Psicopatologia e Psicoterapias Baseadas em Evidências, Jeane se dedica a oferecer um atendimento ético, humanizado e eficaz.
-
-  </p>
-  </div>
-  <div class=" mt-20 px-16 r flex flex-col md:flex-row  justify-center items-center gap-14">
-    <div class="w-full flex flex-col md:flex-row gap-4 md:gap-14 ">
-      <!-- Card 1 -->
-      <div class="w-full md:w-1/2 rounded-xl bg-indigo-500 h-auto p-6 flex flex-col md:flex-row items-center border-2 border-indigo-400 transition-transform duration-300 hover:scale-105 cursor-pointer">
-        <div class="w-full md:w-1/3 flex justify-center">
-          <div class="bg-white w-20 h-20 md:w-32 md:h-32 flex rounded-2xl justify-center items-center">
-            <img src="assets/online-icon.png" class="w-14 md:w-20" alt="">
-          </div>
-        </div>
-        <div class="w-full md:w-2/3 text-center md:text-left">
-          <h1 class="text-2xl md:text-3xl font-bold text-white mt-4 md:mt-0">Online</h1>
-          <p class="text-sm md:text-md text-gray-200 mt-2">
-            Cuide da sua saúde emocional com praticidade e sigilo, de onde estiver, sem precisar sair de casa. Atendimento flexível e personalizado para se ajustar à sua rotina.
-          </p>
-        </div>
       </div>
-    
-      <!-- Card 2 -->
-      <div class="w-full md:w-1/2 rounded-xl mt-8 md:mt-0 bg-indigo-500 h-auto p-6 flex flex-col md:flex-row items-center border-2 border-indigo-400 transition-transform duration-300 hover:scale-105 cursor-pointer">
-        <div class="w-full  md:w-1/3 flex justify-center">
-          <div class="bg-white w-20 h-20 md:w-32 md:h-32 flex rounded-2xl justify-center items-center">
-            <img src="assets/presencial-icon.png" class="w-12 md:w-16" alt="">
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 faq-item">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 flex justify-between items-center cursor-pointer">
+            <span>Como sei se preciso de terapia?</span>
+            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+          </h3>
+          <div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
+            <p class="text-gray-600 pt-2">
+              A terapia pode ajudar em diversos momentos da vida, desde quando enfrentamos dificuldades específicas até para autoconhecimento. Se você sente que suas emoções estão afetando sua qualidade de vida, relacionamentos ou desempenho, pode ser um bom momento para buscar ajuda profissional.
+            </p>
           </div>
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left">
-          <h1 class="text-2xl md:text-3xl font-bold text-white mt-4 md:mt-0">Presencial</h1>
-          <p class="text-sm md:text-md text-gray-200 mt-2">
-            Em Suzano-SP, oferecemos um espaço acolhedor e confortável, perfeito para um atendimento próximo e dedicado, onde você pode se sentir à vontade para compartilhar e cuidar de si.
-          </p>
-        </div>
-      </div>
-    </div>
-    
-</div>
 
-  
-</div>
-
-<div class=" min-h-screen flex bg-indigo-600 w-full mt-52 items-center flex-col md:flex-row  justify-center " id="Servicos">
-    <div class="w-1/2 md:w-3/4 md:p-5 flex justify-center items-center mt-20 md:mt-0">
-        <img src="assets/image-saude.png" class="w-92" alt="">
-    </div>
-    <div class=" p-10">
-      <div class="flex flex-col p-5 flex ">
-        <h1 class="text-4xl text-white font-bold w-1/2 w-full ">Equilíbrio emocional para uma vida mais leve</h1>
-        <p class="text-md mt-6 text-gray-300">Você merece um espaço de acolhimento e escuta qualificada para compreender suas emoções e superar desafios. 
-          Com uma abordagem baseada na ciência, oferecemos suporte psicológico para ajudá-lo a fortalecer sua autoconfiança, 
-          lidar melhor com suas emoções e construir relações mais saudáveis.</p>
-        <div class="flex mt-10 flex-col gap-10">
-          <div class="flex flex-col md:flex-row gap-5">
-            <img src="assets/sucess-icon.png" class="w-12 md:w-20" alt="">
-            <div class="flex flex-col">
-              <h1 class="text-2xl text-white font-bold ">Gestão das emoções</h1>
-              <p class="text-sm md:text-md w-full md:w-3/4 text-gray-300"> Aprenda a gerenciar suas emoções e a fortalecer sua autoestima para viver de forma mais equilibrada.</p>
-            </div>
-          </div>
-          <div class="flex flex-col md:flex-row gap-5">
-            <img src="assets/sucess-icon.png" class="w-12 md:w-20" alt="">
-            <div class="flex flex-col"> 
-              <h1 class="text-2xl text-white font-bold ">Autoconfiança e autoaceitação</h1>
-              <p class="text-sm md:text-md w-full md:w-3/4 text-gray-300">  Fortaleça sua autoconfiança e aprenda a se aceitar como você é, promovendo um amor próprio saudável.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-</div>
-
-<div class="min-h-screen flex flex-col md:flex-row w-full items-center justify-center mt-20 md:mt-2" id="Online">
-  <div class="w-1/2 mr-4 md:w-1/2 p-5 flex justify-center items-center md:hidden">
-      <img src="assets/online-psi.png" class="w-92" alt="">
-  </div>
-  
-  <div class="w-full md:w-1/2 p-10">
-    <div class="flex flex-col p-5">
-      <h1 class="text-4xl text-indigo-600 font-bold">Cuidado especializado no conforto da sua casa</h1>
-      <p class="text-md mt-6 text-gray-600">As consultas online oferecem toda a praticidade e sigilo que você precisa para cuidar da sua saúde emocional de qualquer lugar. 
-        Através de sessões virtuais, você terá a mesma qualidade no atendimento, com total conforto e flexibilidade. </p>
-      
-      <div class="flex flex-col gap-8 mt-10">
-        <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
-          <img src="assets/sucess-icon.png" class="w-12 md:w-20" alt="">
-          <div class="text-left">
-            <h1 class="text-2xl text-indigo-600 font-bold">Acesso fácil e seguro</h1>
-            <p class="text-sm md:text-md text-gray-600">Com o atendimento online, você pode escolher o melhor horário para a consulta e acessar o serviço de qualquer lugar, garantindo praticidade e segurança no seu cuidado.</p>
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 faq-item">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 flex justify-between items-center cursor-pointer">
+            <span>Quantas sessões são necessárias?</span>
+            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+          </h3>
+          <div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
+            <p class="text-gray-600 pt-2">
+              O número de sessões varia conforme cada caso e objetivos estabelecidos. Algumas pessoas percebem melhoras em poucos meses, enquanto outras optam por um acompanhamento mais prolongado. Durante as primeiras sessões, avaliamos juntos suas necessidades e expectativas.
+            </p>
           </div>
         </div>
-        
-        <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
-          <img src="assets/sucess-icon.png" class="w-12 md:w-20" alt="">
-          <div class="text-left">
-            <h1 class="text-2xl text-indigo-600 font-bold">Flexibilidade de horários</h1>
-            <p class="text-sm md:text-md text-gray-600">  Agende suas consultas em horários mais convenientes para você, de acordo com sua rotina, sem perder a qualidade do atendimento presencial.</p>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 faq-item">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 flex justify-between items-center cursor-pointer">
+            <span>A terapia online é eficaz?</span>
+            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+          </h3>
+          <div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
+            <p class="text-gray-600 pt-2">
+              Sim, estudos comprovam que a terapia online pode ser tão eficaz quanto a presencial para a maioria dos casos. O importante é garantir um ambiente privativo e sem interrupções durante as sessões. A TCC é especialmente adequada para o formato online por seu caráter estruturado.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 faq-item">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 flex justify-between items-center cursor-pointer">
+            <span>Como funciona o sigilo nas sessões?</span>
+            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+          </h3>
+          <div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
+            <p class="text-gray-600 pt-2">
+              Todo conteúdo das sessões é protegido pelo sigilo profissional, conforme o Código de Ética da Psicologia. As plataformas online utilizadas são criptografadas para garantir sua privacidade. Exceções ocorrem apenas em situações de risco grave à vida, conforme previsto em lei.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="w-1/2 p-5 hidden md:flex justify-center items-center">
-      <img src="assets/online-psi.png" class="w-92" alt="">
-  </div>
-</div>
+  </section>
 
-
-
-<div id="Contato" class="min-h-screen pattern bg-indigo-600 mt-5  gap-8 md:gap-32  w-full flex flex-col md:flex-row justify-center items-center md:mt-10">
-  <img src="assets/forms-image.png" class="w-36 md:w-1/5 " alt="">
-      
-  <div class="md:w-1/3 w-2/3">
-    <div class="justify-start  flex flex-col">
-      <h1 class="text-white text-3xl md:text-4xl font-bold mb-1 md:mb-4 text-center md:text-left" id="agendamento">
-          Agende sua consulta
-        </h1>
-        <p class="text-gray-100 mb-14 text-center md:text-left">Jeane Psicóloga</p>
+  <!-- Contact Section -->
+  <section id="Contato" class="py-20 px-6 sm:px-12 lg:px-24 bg-white">
+    <div class="max-w-7xl mx-auto md:mt-8 mb-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 hidden md:block">
+          <img src="assets/forms-image.png" alt="Contato" class="w-4/6 max-w-md mx-auto">
         </div>
+        <div class="md:w-1/2 bg-indigo-50 rounded-lg shadow p-8 md:p-10 border border-indigo-100">
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Agende sua consulta</h2>
+          <p class="text-gray-600 mb-8">Preencha o formulário e entrarei em contato para confirmar o agendamento.</p>
+          
+          <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="accessKey" value="c02ec56a-d7cb-420d-9a48-4d88d85160ff">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/JeanePsiqLanding/send.html">
+            
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-user text-gray-400"></i>
+              </div>
+              <input type="text" name="name" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="Nome">
+            </div>
+            
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-envelope text-gray-400"></i>
+              </div>
+              <input type="email" name="email" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="SeuEmail@gmail.com">
+            </div>
+            
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-phone text-gray-400"></i>
+              </div>
+              <input type="text" name="phone" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="(00) 00000-0000">
+            </div>
 
-    
-        <form action="https://api.staticforms.xyz/submit" method="POST">
-          <!-- Chave de acesso -->
-          <input type="hidden" name="accessKey" value="c02ec56a-d7cb-420d-9a48-4d88d85160ff">
-        
-          <!-- Campo para redirecionamento opcional após envio -->
-          <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/JeanePsiqLanding/send.html">
-        
-          <!-- Nome -->
-          <label for="input-group-1" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-          <div class="relative md:mb-8 mb-6">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-              <img src="assets/user-white.png" class="w-6" alt="">
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
+                <i class="fas fa-comment text-gray-400"></i>
+              </div>
+              <textarea name="message" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white h-32" placeholder="Mensagem (opcional)"></textarea>
             </div>
-            <input type="text" name="name" required id="input-group-1" 
-                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
-                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
-                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
-                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="Nome">
-          </div>
-        
-          <!-- Email -->
-          <label for="input-group-2" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-          <div class="relative md:mb-8 mb-6">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-              <img src="assets/email-white.png" class="w-6" alt="">
-            </div>
-            <input type="email" name="email" required id="input-group-2" 
-                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
-                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
-                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
-                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="SeuEmail@gmail.com">
-          </div>
-        
-          <!-- Telefone -->
-          <label for="input-group-3" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white"></label>
-          <div class="relative md:mb-8 mb-6">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-5 pointer-events-none">
-              <img src="assets/phone-white.png" class="w-6" alt="">
-            </div>
-            <input type="text" name="phone" required id="input-group-3" 
-                   class="p-4 bg-indigo-600 border border-white text-gray-900 text-sm rounded-2xl 
-                          focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 pl-14 
-                          dark:border-yellow-300 dark:placeholder-gray-400 dark:text-white 
-                          dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="(00) 00000-0000">
-          </div>
-        
-          <!-- Botão -->
-          <div class="relative mb-8">
-            <button type="submit" 
-                    class="w-full bg-white p-4 text-black font-bold rounded-2xl 
-                           hover:bg-indigo-700 hover:text-white focus:ring-4 
-                           focus:ring-yellow-300 focus:outline-none">
-              Enviar
+            
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all">
+              Enviar Mensagem
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="mb-8 md:mb-0">
+          <img src="assets/logo-jenae.png" class="h-10 mb-4" alt="Jeane Psicóloga Logo">
+          <p class="text-indigo-200 text-sm">
+            Psicóloga CRP XX/XXXXX<br>
+            Especialista em Terapia Cognitivo-Comportamental
+          </p>
+        </div>
         
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Atendimento</h3>
+          <ul class="space-y-2">
+            <li><a href="#Online" class="text-indigo-200 hover:text-white text-sm">Online</a></li>
+            <li><a href="#Presencial" class="text-indigo-200 hover:text-white text-sm">Presencial - Suzano/SP</a></li>
+            <li><a href="#Horarios" class="text-indigo-200 hover:text-white text-sm">Horários</a></li>
+          </ul>
+        </div>
         
-  </div>
-</div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+          <ul class="space-y-2">
+            <li><a href="#FAQ" class="text-indigo-200 hover:text-white text-sm">Perguntas Frequentes</a></li>
+            <li><a href="#Blog" class="text-indigo-200 hover:text-white text-sm">Blog</a></li>
+            <li><a href="#Recursos" class="text-indigo-200 hover:text-white text-sm">Recursos Gratuitos</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contato</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-indigo-300 mr-2 text-sm"></i>
+              <span class="text-indigo-200 text-sm">contato@jeanepsicologa.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone text-indigo-300 mr-2 text-sm"></i>
+              <span class="text-indigo-200 text-sm">(11) 99999-9999</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fab fa-whatsapp text-indigo-300 mr-2 text-sm"></i>
+              <a href="https://wa.me/5599999999999" class="text-indigo-200 hover:text-white text-sm">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-indigo-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <span class="text-sm text-indigo-300">
+            © 2023 Jeane Psicóloga. Todos os direitos reservados.
+          </span>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="text-indigo-300 hover:text-white">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-indigo-300 hover:text-white">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-indigo-300 hover:text-white">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<footer class="bg-white  shadow ">
-  <div class="w-full mx-auto max-w-screen-xl p-8 md:flex md:items-center md:justify-between">
-    <span class="text-sm  sm:text-center text-black">© 2023 <a href="" class="hover:underline">JeanePsicologa™</a>. All Rights Reserved.
-  </span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-black sm:mt-0">
-      <li>
-          <a href="#" class="hover:underline me-4 md:me-6">About</a>
-      </li>
-      <li>
-          <a href="#" class="hover:underline me-4 md:me-6">Privacy </a>
-      </li>
-      <li>
-          <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-      </li>
-      <li>
-          <a href="#" class="hover:underline">Contact</a>
-      </li>
-  </ul>
-  </div>
-</footer>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
 
-  
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+          
+          // Scroll to target
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
-</div>
-    
+    // Add shadow to navbar on scroll
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 10) {
+        nav.classList.add('shadow-sm');
+      } else {
+        nav.classList.remove('shadow-sm');
+      }
+    });
 
-  </div>
-  <script src="./js/script.js"></script>
+    // FAQ accordion functionality
+    // FAQ accordion functionality - inicia fechado
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('h3');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('i');
+      
+      // Inicia todos fechados
+      answer.style.maxHeight = '0';
+      answer.style.opacity = '0';
+      
+      question.addEventListener('click', () => {
+        // Fecha todos os outros itens
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+            otherItem.querySelector('.faq-answer').style.opacity = '0';
+            otherItem.querySelector('i').style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Alterna o item atual
+        item.classList.toggle('active');
+        
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          answer.style.opacity = '1';
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          answer.style.maxHeight = '0';
+          answer.style.opacity = '0';
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
