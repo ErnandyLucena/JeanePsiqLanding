@@ -457,49 +457,49 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="Contato" class="py-20 px-6 sm:px-12 lg:px-24 bg-white">
     <div class="max-w-7xl mx-auto md:mt-8 mb-6">
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 hidden md:block">
           <img src="assets/forms-image.png" alt="Contato" class="w-4/6 max-w-md mx-auto">
         </div>
+  
         <div class="md:w-1/2 bg-indigo-50 rounded-lg shadow p-8 md:p-10 border border-indigo-100">
           <h2 class="text-3xl font-bold text-gray-900 mb-2">Agende sua consulta</h2>
           <p class="text-gray-600 mb-8">Preencha o formulário e entrarei em contato para confirmar o agendamento.</p>
-          
-          <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-6">
+  
+          <!-- FORMULÁRIO -->
+          <form id="contatoForm" class="space-y-6">
             <input type="hidden" name="accessKey" value="c02ec56a-d7cb-420d-9a48-4d88d85160ff">
-            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/JeanePsiqLanding/send.html">
-            
+  
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <i class="fas fa-user text-gray-400"></i>
               </div>
-              <input type="text" name="name" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="Nome">
+              <input type="text" id="name" name="name" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="Nome">
             </div>
-            
+  
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <i class="fas fa-envelope text-gray-400"></i>
               </div>
-              <input type="email" name="email" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="SeuEmail@gmail.com">
+              <input type="email" id="email" name="email" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="SeuEmail@gmail.com">
             </div>
-            
+  
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <i class="fas fa-phone text-gray-400"></i>
               </div>
-              <input type="text" name="phone" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="(00) 00000-0000">
+              <input type="text" id="phone" name="phone" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white" placeholder="(00) 00000-0000">
             </div>
-
+  
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
                 <i class="fas fa-comment text-gray-400"></i>
               </div>
-              <textarea name="message" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white h-32" placeholder="Mensagem (opcional)"></textarea>
+              <textarea id="message" name="message" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 bg-white h-32" placeholder="Mensagem (opcional)"></textarea>
             </div>
-            
+  
             <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all">
               Enviar Mensagem
             </button>
@@ -508,6 +508,15 @@
       </div>
     </div>
   </section>
+  
+  <!-- POPUP DE EMAIL ENVIADO -->
+  <div id="popupSucesso" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-85 hidden z-50">
+    <div class="backdrop-blur-md bg-white/10 border border-white/30 rounded-2xl p-8 shadow-2xl text-center animate-fadeIn">
+      <h3 class="text-2xl font-semibold text-white mb-4">Mensagem enviada!</h3>
+      <p class="text-gray-200 mb-6">Entraremos em contato o mais breve possível.</p>
+      <button id="fecharPopup" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg transition">OK</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-indigo-900 text-white py-12">
@@ -656,6 +665,43 @@
         }
       });
     });
+
+    const form = document.getElementById('contatoForm');
+  const popup = document.getElementById('popupSucesso');
+  const fecharPopup = document.getElementById('fecharPopup');
+
+  // Função de validação
+  function validarFormulario() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (name === "" || email === "" || phone === "") {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return false; // Impede o envio do formulário
+    }
+
+    return true; // Todos os campos obrigatórios foram preenchidos
+  }
+
+  // Quando o formulário for enviado
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede o envio do formulário real
+
+    // Verifica se todos os campos obrigatórios estão preenchidos
+    if (validarFormulario()) {
+      console.log("Formulário enviado"); // Mensagem para depuração no console
+
+      // Exibe o popup de sucesso
+      popup.classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o popup
+    }
+  });
+
+  // Quando o botão de fechar for clicado
+  fecharPopup.addEventListener('click', function() {
+    popup.classList.add('hidden'); // Oculta o popup
+    form.reset(); // Limpa o formulário
+  });
   </script>
 </body>
 </html>

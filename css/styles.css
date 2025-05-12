@@ -65,4 +65,14 @@
 .text-indigo-800 { color: #27005a !important; }
 .text-indigo-900 { color: #1f0045 !important; }
 .text-indigo-950 { color: #140031 !important; }
+
+
   
+@keyframes bounce-in {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.animate-bounce-in {
+  animation: bounce-in 0.4s ease-out forwards;
+}
